@@ -53,10 +53,10 @@ public class Program
             var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var roles = new[] { "Admin", "Manager", "Member", "Guest" };
 
-            foreach (var role in roles)
+            //foreach (var role in roles)
             {
-                if (!await roleManager.RoleExistsAsync(role))
-                    await roleManager.CreateAsync(new IdentityRole(role));
+                //if (!await roleManager.RoleExistsAsync(role))
+                    //await roleManager.CreateAsync(new IdentityRole(role));
             }
 
         }
@@ -64,8 +64,8 @@ public class Program
         {
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-            string email = "admin@psr1.com";
-            string password = "Password1234!";
+            // string email = "admin@psr1.com";
+            // string password = "Password1234!";
             {
                // if (await userManager.FindByEmailAsync(email) == null)
 
